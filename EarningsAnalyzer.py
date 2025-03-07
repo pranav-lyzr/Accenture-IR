@@ -24,12 +24,18 @@ st.markdown(
     <style>
     /* Reduce side margins */
     .reportview-container .main .block-container{
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        max-width: 100% !important;
     }
     /* Smaller heading sizes */
     h1, h2, h3, h4, h5, h6 {
         font-size: 1.2rem !important;
+    }
+    .st-emotion-cache-mtjnbi {
+    width: 100%;
+    padding: 6rem 5rem 10rem;
+    max-width: 2000px;
     }
     </style>
     """,

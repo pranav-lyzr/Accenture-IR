@@ -290,30 +290,30 @@ def main():
             else:
                 st.write("No financial metrics data available.")
 
-        st.subheader("Strategic Insights (Tactical Data)")
-        insights = comparator.generate_financial_comparison(
-            accenture_data["financial_metrics"],
-            other_data["financial_metrics"]
-        )
-        st.markdown(insights)
+        # st.subheader("Strategic Insights (Tactical Data)")
+        # insights = comparator.generate_financial_comparison(
+        #     accenture_data["financial_metrics"],
+        #     other_data["financial_metrics"]
+        # )
+        # st.markdown(insights)
 
-        st.header("Tactical Visualizations")
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        vis_output_dir = f"theme_comparisons_{timestamp}"
-        os.makedirs(vis_output_dir, exist_ok=True)
-        sorted_df = comparator.create_visualizations(
-            comparison_results["summary_df"],
-            accenture_data["company_name"],
-            other_data["company_name"],
-            vis_output_dir
-        )
-        sim_img_path = os.path.join(vis_output_dir, "theme_similarity_scores.png")
-        mentions_img_path = os.path.join(vis_output_dir, "theme_mentions_comparison.png")
-        if os.path.exists(sim_img_path):
-            st.image(sim_img_path, caption="Theme Similarity Scores", use_column_width=True)
-        if os.path.exists(mentions_img_path):
-            st.image(mentions_img_path, caption="Theme Mentions Comparison", use_column_width=True)
-        st.success("Tactical processing and comparison complete.")
+        # st.header("Tactical Visualizations")
+        # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        # vis_output_dir = f"theme_comparisons_{timestamp}"
+        # os.makedirs(vis_output_dir, exist_ok=True)
+        # sorted_df = comparator.create_visualizations(
+        #     comparison_results["summary_df"],
+        #     accenture_data["company_name"],
+        #     other_data["company_name"],
+        #     vis_output_dir
+        # )
+        # sim_img_path = os.path.join(vis_output_dir, "theme_similarity_scores.png")
+        # mentions_img_path = os.path.join(vis_output_dir, "theme_mentions_comparison.png")
+        # if os.path.exists(sim_img_path):
+        #     st.image(sim_img_path, caption="Theme Similarity Scores", use_column_width=True)
+        # if os.path.exists(mentions_img_path):
+        #     st.image(mentions_img_path, caption="Theme Mentions Comparison", use_column_width=True)
+        # st.success("Tactical processing and comparison complete.")
 
 if __name__ == "__main__":
     main()

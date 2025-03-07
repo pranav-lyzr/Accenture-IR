@@ -273,22 +273,22 @@ def main():
             with st.expander(f"{theme} Comparison"):
                 st.markdown(comparison)
 
-        st.subheader("Financial Metrics Comparison")
-        col_f1, col_f2 = st.columns(2)
-        with col_f1:
-            st.markdown("### Accenture Financial Metrics")
-            if accenture_data["financial_metrics"]:
-                for metric, value in accenture_data["financial_metrics"].items():
-                    st.write(f"**{metric}**: {value}")
-            else:
-                st.write("No financial metrics data available.")
-        with col_f2:
-            st.markdown("### Other Company Financial Metrics")
-            if other_data["financial_metrics"]:
-                for metric, value in other_data["financial_metrics"].items():
-                    st.write(f"**{metric}**: {value}")
-            else:
-                st.write("No financial metrics data available.")
+        # st.subheader("Financial Metrics Comparison")
+        # col_f1, col_f2 = st.columns(2)
+        # with col_f1:
+        #     st.markdown("### Accenture Financial Metrics")
+        #     if accenture_data["financial_metrics"]:
+        #         for metric, value in accenture_data["financial_metrics"].items():
+        #             st.write(f"**{metric}**: {value}")
+        #     else:
+        #         st.write("No financial metrics data available.")
+        # with col_f2:
+        #     st.markdown("### Other Company Financial Metrics")
+        #     if other_data["financial_metrics"]:
+        #         for metric, value in other_data["financial_metrics"].items():
+        #             st.write(f"**{metric}**: {value}")
+        #     else:
+        #         st.write("No financial metrics data available.")
 
         # st.subheader("Strategic Insights (Tactical Data)")
         # insights = comparator.generate_financial_comparison(
